@@ -28,13 +28,12 @@ Right-click Program icon in taskbar
 - Allowed Behaviours = Changes whether or not Dokis clone themselves/Throw window screens
 
 -----------------------------------
-NOTICE!
+UPDATE NOTICE!
 -----------------------------------
-- I've added new  behaviors to Gura which she will randomly perform and do on your desktop
-- I can add more behaviors and actions to Gura for you 
+- New Hololive Menu Theme Layout
+- Added new GawrGura AnnoyingGame to Gura
+- Added in the Allowed Myth Behavior Menu option to turn on or off Annoying Gura option, "On" if you want Gura to constantly annoy and eat ur mouse while working, "Off" if you want her to behave
+- I can add more behaviors and actions to them for you 
   by email: faketoothache123@gmail.com or you may comment one from my videos
-- I will create Ina next so you may comment on my video of what behavior and actions
-  you would like her to perform in your desktop
-
 
 ENJOY HOLOLIVE FANS!
