@@ -24,7 +24,7 @@ Right-click Program icon in taskbar
 -----------------------------------
 SUPPORT THIS PROJECT BY
 -----------------------------------
-If you want to support me in making this project I will be glad to and very thankful so feel free to join me in my [Patreon!](patreon.com/nisenoshitsu)
+If you want to support me in making this project I will be glad to and very thankful so feel free to join me in my [Patreon](patreon.com/nisenoshitsu)!
 Or You can Donate On my [Ko-Fi](Ko-fi.com/niseno_shitsu)
 
 ENJOY HOLOLIVE FANS!
