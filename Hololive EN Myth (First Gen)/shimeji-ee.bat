@@ -1,0 +1,1 @@
+javaw.exe -jar Shimeji-ee.jar
