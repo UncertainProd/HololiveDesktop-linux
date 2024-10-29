@@ -27,8 +27,8 @@ UPDATE NOTICE!
 - New Hololive Menu Theme Layout
 - Added new GawrGura AnnoyingGame to Gura
 - Added in the Allowed Myth Behavior Menu option:
-    > On or off Enable Annoying Gura Mode option, "On" if you want Gura to constantly annoy and eat ur mouse while working, "Off" if you want her to behave
-    > On or off Enable Ame Glith After-images option, "On" if you want Amelia to leave After images on your desktop, minimize Your Full Screen Applications which can constantly be annoying especially while gaming, "Off" if you want her to behave
+    . On or off Enable Annoying Gura Mode option, "On" if you want Gura to constantly annoy and eat ur mouse while working, "Off" if you want her to behave
+    . On or off Enable Ame Glith After-images option, "On" if you want Amelia to leave After images on your desktop, minimize Your Full Screen Applications which can constantly be annoying especially while gaming, "Off" if you want her to behave
 - I can add more behaviors and actions to them for you 
   by email: faketoothache123@gmail.com or you may comment one from my videos
 
