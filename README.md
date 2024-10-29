@@ -22,14 +22,9 @@ Right-click Program icon in taskbar
 - Allowed Behaviours = Changes whether or not Dokis clone themselves/Throw window screens
 
 -----------------------------------
-UPDATE NOTICE!
+SUPPORT THIS PROJECT BY
 -----------------------------------
-- New Hololive Menu Theme Layout
-- Added new GawrGura AnnoyingGame to Gura
-- Added in the Allowed Myth Behavior Menu option:
-    * On or off Enable Annoying Gura Mode option, "On" if you want Gura to constantly annoy and eat ur mouse while working, "Off" if you want her to behave
-    * On or off Enable Ame Glith After-images option, "On" if you want Amelia to leave After images on your desktop, minimize Your Full Screen Applications which can constantly be annoying especially while gaming, "Off" if you want her to behave
-- I can add more behaviors and actions to them for you 
-  by email: faketoothache123@gmail.com or you may comment one from my videos
+If you want to support me in making this project I will be glad to and very thankful so feel free to join me in my [Patreon!](patreon.com/nisenoshitsu)
+Or You can Donate On my [Ko-Fi](Ko-fi.com/niseno_shitsu)
 
 ENJOY HOLOLIVE FANS!
