@@ -16,7 +16,7 @@ HOW TO USE:
 -----------------------------------
 SCREENSHOTS:
 -----------------------------------
-<img src="https://i.imgur.com/HXAIbrI.png" alt="HololiveDesktop Myth" width="1000">
+<img src="https://i.imgur.com/gkfcNGY.png" alt="HololiveDesktop Myth" width="1000">
 
 -----------------------------------
 WHERE TO DOWNLOAD?:
