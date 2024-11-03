@@ -16,7 +16,8 @@ HOW TO USE:
 -----------------------------------
 SCREENSHOTS:
 -----------------------------------
-<img src="https://i.imgur.com/4nhwZKz.png" alt="windows 11 acrylic" width="1000">
+<img src="https://i.imgur.com/4nhwZKz.png" alt="HololiveDesktop Myth" width="1000">
+
 -----------------------------------
 WHERE TO DOWNLOAD?:
 -----------------------------------
