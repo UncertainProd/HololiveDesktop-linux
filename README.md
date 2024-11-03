@@ -13,6 +13,11 @@ HOW TO USE:
 - To look for options, Right-click the black colored hololive play icon as shown in the screenshots below in taskbar sytem stray
 - You can enable/disable certain begaviors of each Hololive Talents or Choose and Summon one of them Hololive Members to your computer
 
+-----------------------------------
+SCREENSHOTS:
+-----------------------------------
+<img src="https://i.imgur.com/4nhwZKz.png" alt="windows 11 acrylic" width="243">
+-----------------------------------
 WHERE TO DOWNLOAD?:
 -----------------------------------
 - Click on the "Releases" on the "About" section of this page located at the right side 
