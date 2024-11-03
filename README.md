@@ -17,7 +17,7 @@ HOW TO USE:
 SCREENSHOTS:
 -----------------------------------
 <img src="https://i.imgur.com/4nhwZKz.png" alt="HololiveDesktop Myth" width="1000">
-<img src="https://i.imgur.com/l7y79e9.png" alt="System Tray Icon" width="243">
+<img src="https://i.imgur.com/l7y79e9.png" alt="System Tray Icon" width="800">
 
 -----------------------------------
 WHERE TO DOWNLOAD?:
