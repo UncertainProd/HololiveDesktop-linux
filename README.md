@@ -10,8 +10,13 @@ HOW TO USE:
 - Make sure Java is already installed.
 - EXTRACT CONTENTS OF THIS ARCHIVE TO A FOLDER.
 - Simply run Shimeji-ee.jar, Shimeji-ee.exe or Shimeji-ee.bat
-- To look for options, Right-click either shimeji or program icon in taskbar
-- You can enable/disable certain character by right-click program icon > Settings > Select Shimeji...
+- To look for options, Right-click the black colored hololive play icon as shown in the screenshots below in taskbar sytem stray
+- You can enable/disable certain begaviors of each Hololive Talents or Choose and Summon one of them Hololive Members to your computer
+
+WHERE TO DOWNLOAD?:
+-----------------------------------
+- Click on the "Releases" on the "About" section of this page located at the right side 
+- Follow the instructions inside the "Releases" Page
   
 -----------------------------------
 OPTIONS
