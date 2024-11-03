@@ -22,14 +22,6 @@ WHERE TO DOWNLOAD?:
 -----------------------------------
 - Click on the "Releases" on the "About" section of this page located at the right side 
 - Follow the instructions inside the "Releases" Page
-  
------------------------------------
-OPTIONS
------------------------------------
-Right-click Program icon in taskbar
-- Restore Windows = Restore any windows that thrown off-screen
-- Settings > Select Shimeji... = Enable or Disable certain dokis from appearing.
-- Allowed Behaviours = Changes whether or not Dokis clone themselves/Throw window screens
 
 -----------------------------------
 SUPPORT THIS PROJECT BY
