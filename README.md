@@ -1,8 +1,7 @@
 # HololiveDesktop
 Hololive Members inside your computer doing their stuff while you are working or doing your computer stuff =w=
 ==============================================
-HOLOLIVE EN by Niseno Shitsu
-HOLOLIVE DESK PET or Shimeji-ee by Niseno Shitsu
+HOLOLIVEDESKTOP PET or Shimeji-ee by Niseno Shitsu
 ==============================================
 
 HOW TO USE:
