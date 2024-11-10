@@ -54,7 +54,7 @@ import java.awt.*;
  * Program entry point.
  *
  * Original Author: Yuki Yamada of Group Finity (http://www.group-finity.com/Shimeji/)
- * Currently developed by Shimeji-ee Group.
+ * Currently developed by HololiveEN Myth Shimeji-ee Group.
  */
 public class Main
 {
@@ -608,6 +608,7 @@ public class Main
                             {
                                 // "Disable Breeding" menu item
                                 final JCheckBoxMenuItem breedingMenu = new JCheckBoxMenuItem( languageBundle.getString( "BreedingCloning" ), Boolean.parseBoolean( properties.getProperty( "Breeding", "true" ) ) );
+                                breedingMenu.setText("Enable Ame Glitch After-Images");
                                 breedingMenu.addItemListener( new ItemListener( )
                                 {
                                     public void itemStateChanged( final ItemEvent e )
@@ -619,7 +620,7 @@ public class Main
                                 } );
 
                                 final JCheckBoxMenuItem donothingMenu = new JCheckBoxMenuItem( languageBundle.getString("BreedingCloning"), Boolean.parseBoolean(properties.getProperty("JumpEnabled", "true") ) );
-                                donothingMenu.setText("AnnoyingGura");
+                                donothingMenu.setText("Enable AnnoyingGura Mode");
                                 donothingMenu.addItemListener(new ItemListener() {
                                     public void itemStateChanged(final ItemEvent e) 
                                     {
@@ -1454,7 +1455,7 @@ public class Main
             FileOutputStream output = new FileOutputStream( "./conf/settings.properties" );
             try
             {
-                properties.store( output, "Shimeji-ee Configuration Options" );
+                properties.store( output, "HololiveEN Myth Shimeji-ee Configuration Options" );
             }
             finally
             {

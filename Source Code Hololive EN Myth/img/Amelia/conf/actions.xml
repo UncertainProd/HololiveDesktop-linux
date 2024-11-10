@@ -131,20 +131,20 @@
 
 		<Action Name="GrabCeiling" Type="Stay" BorderType="Ceiling">
 			<Animation>
-				<Pose Image="/shime23.png" ImageAnchor="128,86" Velocity="0,0" Duration="250" />
+				<Pose Image="/shime23.png" ImageAnchor="128,116" Velocity="0,0" Duration="250" />
 			</Animation>
 		</Action>
 		
 		<Action Name="ClimbCeiling" Type="Move" BorderType="Ceiling">
 			<Animation>
-				<Pose Image="/shime25.png" ImageAnchor="128,86" Velocity="0,0" Duration="16" />
-				<Pose Image="/shime25.png" ImageAnchor="128,86" Velocity="-1,0" Duration="4" />
-				<Pose Image="/shime23.png" ImageAnchor="128,86" Velocity="-1,0" Duration="4" />
-				<Pose Image="/shime24.png" ImageAnchor="128,86" Velocity="-1,0" Duration="4" />
-				<Pose Image="/shime24.png" ImageAnchor="128,86" Velocity="0,0" Duration="16" />
-				<Pose Image="/shime24.png" ImageAnchor="128,86" Velocity="-2,0" Duration="4" />
-				<Pose Image="/shime23.png" ImageAnchor="128,86" Velocity="-2,0" Duration="4" />
-				<Pose Image="/shime25.png" ImageAnchor="128,86" Velocity="-2,0" Duration="4" />
+				<Pose Image="/shime25.png" ImageAnchor="128,116" Velocity="0,0" Duration="16" />
+				<Pose Image="/shime25.png" ImageAnchor="128,116" Velocity="-1,0" Duration="4" />
+				<Pose Image="/shime23.png" ImageAnchor="128,116" Velocity="-1,0" Duration="4" />
+				<Pose Image="/shime24.png" ImageAnchor="128,116" Velocity="-1,0" Duration="4" />
+				<Pose Image="/shime24.png" ImageAnchor="128,116" Velocity="0,0" Duration="16" />
+				<Pose Image="/shime24.png" ImageAnchor="128,116" Velocity="-2,0" Duration="4" />
+				<Pose Image="/shime23.png" ImageAnchor="128,116" Velocity="-2,0" Duration="4" />
+				<Pose Image="/shime25.png" ImageAnchor="128,116" Velocity="-2,0" Duration="4" />
 			</Animation>
 		</Action>
 
@@ -305,6 +305,13 @@
 			<Animation>
 				<Pose Image="/shime18.png" ImageAnchor="128,256" Velocity="0,0" Duration="4" />
 				<Pose Image="/shime19.png" ImageAnchor="128,256" Velocity="0,0" Duration="4" />
+			</Animation>
+		</Action>
+
+		<Action Name="Bouncing2" Type="Animate" BorderType="Floor">
+			<Animation>
+				<Pose Image="/shime19.png" ImageAnchor="128,256" Velocity="0,0" Duration="4" />
+				<Pose Image="/shime18.png" ImageAnchor="128,256" Velocity="0,0" Duration="50" />
 			</Animation>
 		</Action>
 
@@ -767,7 +774,23 @@
 			<ActionReference Name="SitAndSpinHeadAction" />
 		</Action>
 
-		<Action Name="AmeGlitch Trial" Type="Embedded" Class="com.group_finity.mascot.action.Breeder"
+		<Action Name="Amelia Time Glitch" Type="Embedded" Class="com.group_finity.mascot.action.Breed"
+			BornX="-32" BornY="96" BornBehavior="PullUp">
+			<Animation>
+				<Pose Image="/Aglitch_0001.png" ImageAnchor="128,256" Velocity="0,0" Duration="3" />
+				<Pose Image="/Aglitch_0002.png" ImageAnchor="128,256" Velocity="0,0" Duration="3" />
+				<Pose Image="/Aglitch_0003.png" ImageAnchor="128,256" Velocity="0,0" Duration="3" />
+				<Pose Image="/Aglitch_0004.png" ImageAnchor="128,256" Velocity="0,0" Duration="3" />
+				<Pose Image="/Aglitch_0002.png" ImageAnchor="128,256" Velocity="0,0" Duration="3" />
+				<Pose Image="/Aglitch_0004.png" ImageAnchor="128,256" Velocity="0,0" Duration="3" />
+				<Pose Image="/Aglitch_0001.png" ImageAnchor="128,256" Velocity="0,0" Duration="3" />
+				<Pose Image="/Aglitch_0003.png" ImageAnchor="128,256" Velocity="0,0" Duration="3" />
+				<Pose Image="/Aglitch_0002.png" ImageAnchor="128,256" Velocity="0,0" Duration="3" />
+				<Pose Image="/Aglitch_0004.png" ImageAnchor="128,256" Velocity="0,0" Duration="3" />
+			</Animation>
+		</Action>
+
+		<Action Name="Amelia Time Glitch Behavior" Type="Embedded" Class="com.group_finity.mascot.action.Breeder"
 			BornX="-32" BornY="96" BornBehavior="PullUp">
 			<Animation>
 				<Pose Image="/Aglitch_0001.png" ImageAnchor="128,256" Velocity="0,0" Duration="3" />
@@ -811,7 +834,7 @@
 
 		<Action Name="PullUp" Type="Sequence">
 			<ActionReference Name="Falling" InitialVX="${mascot.lookRight ? 10 : -10}" InitialVY="-40"/>
-			<ActionReference Name="Bouncing" />
+			<ActionReference Name="Bouncing2" />
 		</Action>
 		<Action Name="Divide1" Type="Embedded" Class="com.group_finity.mascot.action.Breed"
 			BornX="-16" BornY="0" BornBehavior="Divided">

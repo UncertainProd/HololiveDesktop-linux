@@ -1412,7 +1412,7 @@ public class SettingsWindow extends javax.swing.JDialog
         pnlAbout.add(rigid2);
 
         lblVersion.setFont(lblVersion.getFont().deriveFont(lblVersion.getFont().getSize()+4f));
-        lblVersion.setText("Shimeji-ee Developed by Kilkakon");
+        lblVersion.setText("HololiveEN Myth Shimeji-ee Developed by Kilkakon");
         lblVersion.setAlignmentX(0.5F);
         pnlAbout.add(lblVersion);
         pnlAbout.add(rigid3);
@@ -1567,7 +1567,7 @@ public class SettingsWindow extends javax.swing.JDialog
                     properties.setProperty( "BackgroundImage", backgroundImage == null ? "" : backgroundImage );
                 }
                 
-                properties.store( output, "Shimeji-ee Configuration Options" );
+                properties.store( output, "HololiveEN Myth Shimeji-ee Configuration Options" );
             }
             finally
             {
@@ -1873,7 +1873,7 @@ public class SettingsWindow extends javax.swing.JDialog
         secondaryColour3 = Color.decode( "#D0D0D2" );
         blackColour = Color.decode( "#000000" );
         whiteColour = Color.decode( "#FFFFFF" );
-        font = Font.decode( "SansSerif-PLAIN-12" );
+        font = Font.decode( "Arial Narrow-Bold-13" );
         font = font.deriveFont( font.getSize( ) * menuScaling );
         pnlPrimaryColour1Preview.setBackground( primaryColour1 );
         txtPrimaryColour1.setText( String.format( "#%02X%02X%02X", primaryColour1.getRed( ), primaryColour1.getGreen( ), primaryColour1.getBlue( ) ) );

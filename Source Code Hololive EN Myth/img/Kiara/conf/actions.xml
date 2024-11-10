@@ -293,25 +293,25 @@
 		<Action Name="FallWithIe" Type="Embedded" Class="com.group_finity.mascot.action.FallWithIE"
 			 IeOffsetX="0" IeOffsetY="-64">
 			<Animation>
-				<Pose Image="/stand.png" ImageAnchor="64,128" Velocity="0,0" Duration="250" />
+				<Pose Image="/panic5.png" ImageAnchor="64,128" Velocity="-8,0" Duration="2" />
+				<Pose Image="/panic5.png" ImageAnchor="64,128" Velocity="-8,0" Duration="2" />
+				<Pose Image="/panic5.png" ImageAnchor="64,128" Velocity="-8,0" Duration="2" />
 			</Animation>
 		</Action>
 		<Action Name="WalkWithIe" BorderType="Floor" Type="Embedded" Class="com.group_finity.mascot.action.WalkWithIE"
 			 IeOffsetX="0" IeOffsetY="-64">
 			<Animation>
-				<Pose Image="/stand.png" ImageAnchor="64,128" Velocity="-2,0" Duration="6" />
-				<Pose Image="/stand_walk1.png" ImageAnchor="64,128" Velocity="-2,0" Duration="6" />
-				<Pose Image="/stand_walk2.png" ImageAnchor="64,128" Velocity="-2,0" Duration="6" />
-				<Pose Image="/stand_walk1.png" ImageAnchor="64,128" Velocity="-2,0" Duration="6" />
+				<Pose Image="/panic5.png" ImageAnchor="64,128" Velocity="-8,0" Duration="2" />
+				<Pose Image="/panic5.png" ImageAnchor="64,128" Velocity="-8,0" Duration="2" />
+				<Pose Image="/panic5.png" ImageAnchor="64,128" Velocity="-8,0" Duration="2" />
 			</Animation>
 		</Action>
 		<Action Name="RunWithIe" BorderType="Floor" Type="Embedded" Class="com.group_finity.mascot.action.WalkWithIE"
 			 IeOffsetX="0" IeOffsetY="-64">
 			<Animation>
-				<Pose Image="/stand.png" ImageAnchor="64,128" Velocity="-8,0" Duration="2" />
-				<Pose Image="/stand_walk1.png" ImageAnchor="64,128" Velocity="-8,0" Duration="2" />
-				<Pose Image="/stand_walk2.png" ImageAnchor="64,128" Velocity="-8,0" Duration="2" />
-				<Pose Image="/stand_walk1.png" ImageAnchor="64,128" Velocity="-8,0" Duration="2" />
+				<Pose Image="/panic5.png" ImageAnchor="64,128" Velocity="-8,0" Duration="2" />
+				<Pose Image="/panic5.png" ImageAnchor="64,128" Velocity="-8,0" Duration="2" />
+				<Pose Image="/panic5.png" ImageAnchor="64,128" Velocity="-8,0" Duration="2" />
 			</Animation>
 		</Action>
 		<Action Name="ThrowIe" BorderType="Floor" Type="Embedded" Class="com.group_finity.mascot.action.ThrowIE"

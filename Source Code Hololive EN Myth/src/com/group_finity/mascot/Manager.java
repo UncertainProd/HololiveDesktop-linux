@@ -18,7 +18,7 @@ import java.awt.Point;
  * Maintains a list of mascot, the object to time.
  * 
  * Original Author: Yuki Yamada of Group Finity (http://www.group-finity.com/Shimeji/)
- * Currently developed by Shimeji-ee Group.
+ * Currently developed by HololiveEN Myth Shimeji-ee Group.
  */
 public class Manager {
 

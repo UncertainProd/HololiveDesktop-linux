@@ -7,7 +7,7 @@ import java.util.concurrent.ConcurrentHashMap;
 import javax.sound.sampled.Clip;
 
 /**
- * This static class contains all the sounds loaded by Shimeji-ee.
+ * This static class contains all the sounds loaded by HololiveEN Myth Shimeji-ee.
  * 
  * Visit kilkakon.com/shimeji for updates
  * @author Kilkakon

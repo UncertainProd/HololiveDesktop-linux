@@ -9,7 +9,7 @@ import java.util.Map;
 
 /**
  * Original Author: Yuki Yamada of Group Finity (http://www.group-finity.com/Shimeji/)
- * Currently developed by Shimeji-ee Group.
+ * Currently developed by HololiveEN Myth Shimeji-ee Group.
  */
 
 public class ComplexArea {

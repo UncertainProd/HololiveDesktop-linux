@@ -20,7 +20,7 @@
 		<!-- ALWAYS REQUIRED -->
 		<Behavior Name="Thrown" Frequency="0" Hidden="true" />
 		
-		<Behavior Name="PullUp" Frequency="0" Hidden="false" />
+		<Behavior Name="PullUp" Frequency="0" Hidden="true" />
 
 		<Behavior Name="Divided" Frequency="0" Hidden="true" />
 
@@ -50,18 +50,19 @@
 					<BehaviorReference Name="LieDown" Frequency="1" />
 				</NextBehavior>
 			</Behavior>
-			<Behavior Name="WalkLeftAlongFloorAndSit" Frequency="100" Hidden="true" />
-			<Behavior Name="WalkRightAlongFloorAndSit" Frequency="100" Hidden="true" />
+			<Behavior Name="WalkLeftAlongFloorAndSit" Frequency="100" Hidden="false" />
+			<Behavior Name="WalkRightAlongFloorAndSit" Frequency="100" Hidden="false" />
 			<Behavior Name="GrabWorkAreaBottomLeftWall" Frequency="100" Hidden="true" />
 			<Behavior Name="GrabWorkAreaBottomRightWall" Frequency="100" Hidden="true" />
-			<Behavior Name="WalkLeftAndSit" Frequency="100" Hidden="true" />
-			<Behavior Name="WalkRightAndSit" Frequency="100" Hidden="true" />
+			<Behavior Name="WalkLeftAndSit" Frequency="100" Hidden="false" />
+			<Behavior Name="WalkRightAndSit" Frequency="100" Hidden="false" />
 			<Behavior Name="WalkAndGrabBottomLeftWall" Hidden="true" Frequency="100" />
 			<Behavior Name="WalkAndGrabBottomRightWall" Hidden="true" Frequency="100" />
 			<Behavior Name="JumpFromBottomOfIE" Frequency="50" Condition="#{mascot.anchor.x &gt;= mascot.environment.activeIE.left &amp;&amp;
-				mascot.anchor.x &lt; mascot.environment.activeIE.right}" />
+				mascot.anchor.x &lt; mascot.environment.activeIE.right}" Hidden="true"/>
 			<Behavior Name="Ame GroundPound" Frequency="100" Hidden="false" />
-			<Behavior Name="AmeGlitch Trial" Frequency="100" Hidden="false" />
+			<Behavior Name="Amelia Time Glitch" Frequency="100" Hidden="false" />
+			<Behavior Name="Amelia Time Glitch Behavior" Frequency="100" Hidden="true" />
 		</Condition>
 		
 		<!-- On Work Area Facing the Wall -->
@@ -123,16 +124,15 @@
 			<Behavior Name="JumpOnIELeftWall" Frequency="50" Condition="#{mascot.anchor.x &lt; mascot.environment.activeIE.left &amp;&amp;
 				Math.abs(mascot.environment.activeIE.bottom-mascot.anchor.y) &lt;mascot.environment.activeIE.height/4}" Hidden="true" />
 			<Behavior Name="JumpOnIERightWall" Frequency="50" Condition="#{mascot.anchor.x &gt; mascot.environment.activeIE.right &amp;&amp;
-				Math.abs(mascot.environment.activeIE.bottom-mascot.anchor.y) &lt;mascot.environment.activeIE.height/4}" Hidden="true" />
-				
+				Math.abs(mascot.environment.activeIE.bottom-mascot.anchor.y) &lt;mascot.environment.activeIE.height/4}" Hidden="true" />	
 			<Behavior Name="ThrowIEFromLeft" Frequency="20" Condition="#{mascot.environment.activeIE.bottom &lt; mascot.anchor.y-64 &amp;&amp;
-				mascot.anchor.x &lt; mascot.environment.activeIE.left}" />
+				mascot.anchor.x &lt; mascot.environment.activeIE.left}" Hidden="true"/>
 			<Behavior Name="ThrowIEFromRight" Frequency="20" Condition="#{mascot.environment.activeIE.bottom &lt; mascot.anchor.y-64 &amp;&amp;
-				mascot.anchor.x &gt; mascot.environment.activeIE.right}" />
+				mascot.anchor.x &gt; mascot.environment.activeIE.right}" Hidden="true"/>
 			<Behavior Name="WalkAndThrowIEFromRight" Frequency="20" Condition="#{mascot.environment.activeIE.bottom &lt; mascot.anchor.y-64 &amp;&amp;
-				mascot.anchor.x &lt; mascot.environment.activeIE.left}" />
+				mascot.anchor.x &lt; mascot.environment.activeIE.left}" Hidden="true"/>
 			<Behavior Name="WalkAndThrowIEFromLeft" Frequency="20" Condition="#{mascot.environment.activeIE.bottom &lt; mascot.anchor.y-64 &amp;&amp;
-				mascot.anchor.x &gt; mascot.environment.activeIE.right}" />
+				mascot.anchor.x &gt; mascot.environment.activeIE.right}" Hidden="true"/>
 		</Condition>
 
 	</BehaviorList>

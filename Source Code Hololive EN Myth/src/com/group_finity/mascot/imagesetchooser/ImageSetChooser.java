@@ -245,7 +245,7 @@ public class ImageSetChooser extends javax.swing.JDialog
             try
             {
                 Main.getInstance( ).getProperties( ).setProperty( "ActiveShimeji", imageSets.toString( ).replace( "[", "" ).replace( "]", "" ).replace( ", ", "/" ) );
-                Main.getInstance( ).getProperties( ).store( output, "Shimeji-ee Configuration Options" );
+                Main.getInstance( ).getProperties( ).store( output, "HololiveEN Myth Shimeji-ee Configuration Options" );
             }
             finally
             {
@@ -282,7 +282,7 @@ public class ImageSetChooser extends javax.swing.JDialog
         selectAllLabel = new javax.swing.JLabel();
 
         setDefaultCloseOperation( javax.swing.WindowConstants.DISPOSE_ON_CLOSE );
-        setTitle( "Shimeji-ee Image Set Chooser" );
+        setTitle( "HololiveEN Myth Shimeji-ee Image Set Chooser" );
         setMinimumSize( new java.awt.Dimension( 670, 495 ) );
 
         jScrollPane1.setPreferredSize( new java.awt.Dimension( 518, 100 ) );
