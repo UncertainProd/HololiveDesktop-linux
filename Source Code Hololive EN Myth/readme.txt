@@ -1,3 +1,9 @@
+Hello I'm Niseno Shitsu, here is the file on which you can download the source zip code file so which you can configure and also 
+clean up the program a bit more cause I only customized this program to fit the Hololive EN Myth theme and of course added extra animations
+design, and actions for Gura, Amelia, Calli, Kiara, and Ina. Made it look clean and nice
+
+Feel free to read below as the program by default, think of it as kind of a template already which I just custimoized and edited into a custom Hololive Skin and of course edit the labels and text like instead of "Shimeji-ee" I changed it to "Hololive EN Myth Shimeji-ee" in some areas to fit the Hololive Theme, is made by Kilkakon. Huge thanks and enjoy coders!
+
 Shimeji-ee: Shimeji English Enhanced
 
 Shimeji-ee is a Windows desktop mascot that freely wanders and plays around the screen.  The mascot is very configurable; its actions are defined through xml and its animations/images can be (painstakingly) customized.  Shimeji was originally created by Yuki Yamada of Group Finity (http://www.group-finity.com/Shimeji/).  This branch of the original Shimeji project not only translates the program/source to English, but adds additional enhancements to Shimeji by Kilkakon and other members of the community.
