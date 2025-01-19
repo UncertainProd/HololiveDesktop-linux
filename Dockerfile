@@ -25,7 +25,7 @@ FROM frekele/ant:1.10.3-jdk8@sha256:2c67c175a3906a0879072dfc38e87d6364538dc73f1e
 # trying to build jna from source
 ADD ./jna_3_4_0_src /opt/jna_3_4_0_src
 ADD ./nimrodlf-src-1.2d /opt/nimrodlf-src-1.2d
-ADD ./netbeans /opt/netbeans
+ADD ./netbeans_awtextras_src /opt/netbeans_awtextras_src
 
 ADD ["./Source Code Hololive EN Myth/", "/opt/ShimejiSourceCode/"]
 WORKDIR /opt/ShimejiSourceCode
