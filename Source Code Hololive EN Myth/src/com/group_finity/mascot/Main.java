@@ -467,6 +467,16 @@ public class Main
         return false;
     }
 
+    private BufferedImage trayImg = null;
+    private BufferedImage gettrayImg()
+    {
+        if(trayImg == null)
+        {
+            return new BufferedImage(16, 16, BufferedImage.TYPE_INT_RGB);
+        }
+        return trayImg;
+    }
+
     /**
      * Create a tray icon.
      *
@@ -478,29 +488,20 @@ public class Main
         log.log( Level.INFO, "create a tray icon" );
         
         // get the tray icon image
-        BufferedImage image = null;
         try
         {
-            image = ImageIO.read( Main.class.getResource( "/icon.png" ) );
+            trayImg = ImageIO.read( Main.class.getResource( "/img/icon.png" ) );
         }
         catch( final Exception e )
         {
             log.log( Level.SEVERE, "Failed to create tray icon", e );
             Main.showError( languageBundle.getString( "FailedDisplaySystemTrayErrorMessage" ) + "\n" + languageBundle.getString( "SeeLogForDetails" ) );
         }
-        finally
-        {
-            if( image == null )
-                image = new BufferedImage( 16, 16, BufferedImage.TYPE_INT_RGB );
-        }
 
         try
         {
-            // Create the tray icon
-            final TrayIcon icon = new TrayIcon( image, languageBundle.getString( "ShimejiEE" ) );
-            
-            // attach menu
-            icon.addMouseListener( new MouseListener( )
+            // create the mouse listener
+            MouseListener mlistener = new MouseListener( )
             {
                 private int scaling;
 
@@ -742,7 +743,7 @@ public class Main
                             {
                                 form.dispose( );
                                 ImageSetChooser chooser = new ImageSetChooser( frame, true );
-                                chooser.setIconImage( icon.getImage( ) );
+                                chooser.setIconImage( gettrayImg() );
                                 setActiveImageSets( chooser.display( ) );
                             }
                         } );
@@ -754,7 +755,7 @@ public class Main
                             {
                                 form.dispose( );
                                 SettingsWindow dialog = new SettingsWindow( frame, true );
-                                dialog.setIconImage( icon.getImage( ) );
+                                dialog.setIconImage( gettrayImg() );
                                 dialog.init( );
                                 dialog.display( );
                                 
@@ -1233,7 +1234,7 @@ public class Main
                         form.setVisible(true);
                         
                         // Your existing code
-                        form.setIconImage(icon.getImage());
+                        form.setIconImage(gettrayImg());
                         form.setTitle(languageBundle.getString("Hololive"));
                         form.setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
                         form.setAlwaysOnTop(true);
@@ -1305,8 +1306,37 @@ public class Main
                 public void mouseExited( MouseEvent e )
                 {
                 }
-            } );
+            };
 
+            if (!SystemTray.isSupported())
+            {
+                return;
+                // log.log(Level.WARNING, "This system does not support system tray!");
+                // Frame win = new Frame("Tray icon thing");
+                // Label label = new Label("This is a test on linux!");
+                // label.setAlignment(Label.CENTER);
+                // win.add(label);
+                // win.setSize(300, 300);
+                // win.setVisible(true);
+                // win.setIconImage(gettrayImg());
+                // win.addWindowListener(new java.awt.event.WindowAdapter() {
+                //     @Override
+                //     public void windowClosing(java.awt.event.WindowEvent e)
+                //     {
+                //         System.exit(0);
+                //     }
+                // });
+                // System.out.println("Adding mouse listener");
+                // win.addMouseListener(mlistener);
+                // label.addMouseListener(mlistener);
+                // return;
+            }
+
+            // Create the tray icon
+            final TrayIcon icon = new TrayIcon( gettrayImg(), languageBundle.getString( "ShimejiEE" ) );
+            
+            // attach menu
+            icon.addMouseListener( mlistener );
             // Show tray icon
             SystemTray.getSystemTray( ).add( icon );
         }
