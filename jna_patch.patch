@@ -1,0 +1,23 @@
+1178,1181c1178,1194
+<                 Object o = config.getClass()
+<                     .getMethod("getVisual", (Class[])null)
+<                     .invoke(config, (Object[])null);
+<                 return ((Number)o).longValue();
+---
+>                 // java.io.PrintWriter pw = new java.io.PrintWriter("./MYLOG.txt", "UTF-8");
+>                 // pw.println("ABOUT TO CALL THE ILLEGAL THING: " + config.toString());
+>                 // pw.close();
+>                 // Object o = config.getClass()
+>                 //     .getMethod("getVisual", (Class[])null)
+>                 //     .invoke(config, (Object[])null);
+>                 // return ((Number)o).longValue();
+>                 String confrepr = config.toString();
+>                 String patternstr = ".+,vis=0x(.+)\\]";
+>                 java.util.regex.Pattern p = java.util.regex.Pattern.compile(patternstr);
+>                 java.util.regex.Matcher m = p.matcher(confrepr);
+>                 if(m.find())
+>                 {
+>                     return Long.parseLong(m.group(1).toUpperCase(), 16);
+>                 }
+>                 System.out.println("Warning: Could not getVisual from config: " + confrepr);
+>                 return -1;
