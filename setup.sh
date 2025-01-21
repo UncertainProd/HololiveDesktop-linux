@@ -10,4 +10,8 @@ wget https://nilogonzalez.es/nimrodlf/data/nimrodlf-src.zip
 unzip nimrodlf-src.zip
 rm -rf nimrodlf-src.zip
 
+# patch jna(...).WindowUtils.java to avoid a warning
+echo "Patching WindowUtils.java from JNA ..."
+patch ./jna_3_4_0_src/contrib/platform/src/com/sun/jna/platform/WindowUtils.java jna_patch.patch
+
 echo "Setup complete. You should be ready to build now"
