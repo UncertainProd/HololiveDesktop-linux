@@ -511,12 +511,7 @@ public class Main
                 }
 
                 @Override
-                public void mousePressed( MouseEvent e )
-                {
-                }
-
-                @Override
-                public void mouseReleased( MouseEvent event )
+                public void mousePressed( MouseEvent event )
                 {
                     if( event.isPopupTrigger( ) )
                     {
@@ -1156,7 +1151,9 @@ public class Main
                         } );
                         
                         // Load the background image
-                        ImageIcon backgroundImage = new ImageIcon("img\\BG.png");
+                        ImageIcon backgroundImage = new ImageIcon(properties.getProperty("BackgroundImagePath", "img/BG.png"));
+                        int bgPanelWidth = Integer.parseInt(properties.getProperty("RightClickDialogWidth", ""+backgroundImage.getIconWidth()));
+                        int bgPanelHeight = Integer.parseInt(properties.getProperty("RightClickDialogHeight", ""+backgroundImage.getIconHeight()));
                         
                         // Create a custom JPanel to draw the background image
                         JPanel backgroundPanel = new JPanel() {
@@ -1166,15 +1163,16 @@ public class Main
                                 Graphics2D g2d = (Graphics2D) g.create();
                                 float opacity = 0.9f; // Set the desired opacity (0.0f to 1.0f)
                                 g2d.setComposite(AlphaComposite.getInstance(AlphaComposite.SRC_OVER, opacity));
-                                g2d.drawImage(backgroundImage.getImage(), 0, 0, getWidth(), getHeight(), this);
+                                g2d.drawImage(backgroundImage.getImage(), 0, 0, bgPanelWidth, bgPanelHeight, this);
                                 g2d.dispose();
                             }
                         };
-                        backgroundPanel.setBounds(0, 0, 200, 400); // Set the size of the background panel
+                        backgroundPanel.setBounds(0, 0, bgPanelWidth, bgPanelHeight); // Set the size of the background panel
                         
                         // Create a JLayeredPane
                         JLayeredPane layeredPane = new JLayeredPane();
-                        layeredPane.setPreferredSize(new Dimension(200, 400));
+                        // layeredPane.setPreferredSize(new Dimension(200, 400));
+                        layeredPane.setPreferredSize(new Dimension(bgPanelWidth, bgPanelHeight));
                         
                         // Add the background panel to the lowest layer
                         layeredPane.add(backgroundPanel, JLayeredPane.DEFAULT_LAYER);
@@ -1224,7 +1222,7 @@ public class Main
                         
                         
                         // Add the panel to the JLayeredPane at a higher layer
-                        panel.setBounds(0, 0, 200, 400);
+                        panel.setBounds(0, 0, bgPanelWidth, bgPanelHeight);
                         layeredPane.add(panel, JLayeredPane.PALETTE_LAYER);
                         
                         
@@ -1275,7 +1273,12 @@ public class Main
                         form.setVisible(true);
                         form.setMinimumSize(form.getSize());
                     }
-                    else if( event.getButton( ) == MouseEvent.BUTTON1 )
+                }
+
+                @Override
+                public void mouseReleased( MouseEvent event )
+                {
+                    if( event.getButton( ) == MouseEvent.BUTTON1 )
                     {
                         createMascot( );
                     }
@@ -1310,26 +1313,27 @@ public class Main
 
             if (!SystemTray.isSupported())
             {
-                return;
-                // log.log(Level.WARNING, "This system does not support system tray!");
-                // Frame win = new Frame("Tray icon thing");
-                // Label label = new Label("This is a test on linux!");
-                // label.setAlignment(Label.CENTER);
-                // win.add(label);
-                // win.setSize(300, 300);
-                // win.setVisible(true);
-                // win.setIconImage(gettrayImg());
-                // win.addWindowListener(new java.awt.event.WindowAdapter() {
-                //     @Override
-                //     public void windowClosing(java.awt.event.WindowEvent e)
-                //     {
-                //         System.exit(0);
-                //     }
-                // });
-                // System.out.println("Adding mouse listener");
-                // win.addMouseListener(mlistener);
-                // label.addMouseListener(mlistener);
                 // return;
+                // Using a window which you can right click is kinda hack-y. gotta find a better way
+                log.log(Level.WARNING, "This system does not support system tray!");
+                Frame win = new Frame("Tray icon thing");
+                Label label = new Label("This is a test on linux!");
+                label.setAlignment(Label.CENTER);
+                win.add(label);
+                win.setSize(300, 300);
+                win.setVisible(true);
+                win.setIconImage(gettrayImg());
+                win.addWindowListener(new java.awt.event.WindowAdapter() {
+                    @Override
+                    public void windowClosing(java.awt.event.WindowEvent e)
+                    {
+                        System.exit(0);
+                    }
+                });
+                System.out.println("Adding mouse listener");
+                win.addMouseListener(mlistener);
+                label.addMouseListener(mlistener);
+                return;
             }
 
             // Create the tray icon
