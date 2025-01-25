@@ -192,6 +192,18 @@ public class Mascot
 
     private void mousePressed( final MouseEvent event )
     {
+        if( event.isPopupTrigger( ) )
+        {
+            SwingUtilities.invokeLater( new Runnable( )
+            {
+                @Override
+                public void run( )
+                {
+                    showPopup( event.getX( ), event.getY( ) );
+                }
+            } );
+        }
+
         // Switch to drag the animation when the mouse is down
         if( !isPaused( ) && getBehavior( ) != null )
         {
@@ -210,31 +222,17 @@ public class Mascot
 
     private void mouseReleased(final MouseEvent event)
     {
-        if( event.isPopupTrigger( ) )
+        if( !isPaused( ) && getBehavior( ) != null )
         {
-            SwingUtilities.invokeLater( new Runnable( )
+            try
             {
-                @Override
-                public void run( )
-                {
-                    showPopup( event.getX( ), event.getY( ) );
-                }
-            } );
-        }
-        else
-        {
-            if( !isPaused( ) && getBehavior( ) != null )
+                getBehavior( ).mouseReleased( event );
+            }
+            catch( final CantBeAliveException e )
             {
-                try
-                {
-                    getBehavior( ).mouseReleased( event );
-                }
-                catch( final CantBeAliveException e )
-                {
-                    log.log( Level.SEVERE, "Fatal Error", e );
-                    Main.showError( Main.getInstance( ).getLanguageBundle( ).getString( "SevereShimejiErrorErrorMessage" ) + "\n" + e.getMessage( ) + "\n" + Main.getInstance( ).getLanguageBundle( ).getString( "SeeLogForDetails" ) );
-                    dispose( );
-                }
+                log.log( Level.SEVERE, "Fatal Error", e );
+                Main.showError( Main.getInstance( ).getLanguageBundle( ).getString( "SevereShimejiErrorErrorMessage" ) + "\n" + e.getMessage( ) + "\n" + Main.getInstance( ).getLanguageBundle( ).getString( "SeeLogForDetails" ) );
+                dispose( );
             }
         }
     }
