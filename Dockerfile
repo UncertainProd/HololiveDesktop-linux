@@ -22,27 +22,37 @@
 # FROM frekele/ant:1.10.3-jdk8
 FROM frekele/ant:1.10.3-jdk8@sha256:2c67c175a3906a0879072dfc38e87d6364538dc73f1e7a5e456c672a8f2418b4
 
-# trying to build jna from source
-ADD ./jna_3_4_0_src /opt/jna_3_4_0_src
-ADD ./nimrodlf-src-1.2d /opt/nimrodlf-src-1.2d
-ADD ./netbeans_awtextras_src /opt/netbeans_awtextras_src
-
 # Setup stuff
 RUN sed -i s/deb.debian.org/archive.debian.org/g /etc/apt/sources.list
 RUN sed -i 's|security.debian.org|archive.debian.org|g' /etc/apt/sources.list
 RUN sed -i '/stretch-updates/d' /etc/apt/sources.list
 
 RUN ["apt", "update"]
-RUN ["apt", "install", "-y", "build-essential"]
-RUN ["apt", "install", "-y", "libx11-dev"]
-RUN ["apt", "install", "-y", "libxt-dev"]
+RUN ["apt", "install", "-y", "build-essential", "libx11-dev", "libxt-dev"]
+
+# trying to build jna from source
+ADD ./jna_3_4_0_src /opt/jna_3_4_0_src
+ADD ./nimrodlf-src-1.2d /opt/nimrodlf-src-1.2d
+ADD ./netbeans_awtextras_src /opt/netbeans_awtextras_src
 
 # Compile the dependencies
 # JNA:
 WORKDIR /opt/jna_3_4_0_src
-RUN ["ant", "jar"]
+RUN ["ant", "dist"]
 
+# Nimrod:
+WORKDIR /opt/nimrodlf-src-1.2d
+RUN ant
+
+# make src directory
 ADD ["./Source Code Hololive EN Myth/", "/opt/ShimejiSourceCode/"]
+
+# move JNA
+RUN ["mv", "/opt/jna_3_4_0_src/build-d64/jna.jar", "/opt/ShimejiSourceCode/lib/"]
+# move Nimrod
+RUN ["mv", "/opt/nimrodlf-src-1.2d/dist/nimrodlf.jar", "/opt/ShimejiSourceCode/lib/"]
+
+
 WORKDIR /opt/ShimejiSourceCode
 
 # run this in the container in bash
