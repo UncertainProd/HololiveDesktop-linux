@@ -22,13 +22,13 @@
 			<src path="/opt/jna_3_4_0_src/contrib/platform/src" />
 			<src path="/opt/netbeans_awtextras_src" />
 			<!-- compiling nimrod from source -->
-			<src path="/opt/nimrodlf-src-1.2d/src" />
+			<!-- <src path="/opt/nimrodlf-src-1.2d/src" /> -->
 
 			<src path="src_generic"/>
 			<src path="src_virtual"/>
-			<!-- <classpath>
+			<classpath>
 				<fileset dir="lib" />
-			</classpath> -->
+			</classpath>
 			<compilerarg line="-encoding utf-8"/>
 		</javac>
 	</target>
