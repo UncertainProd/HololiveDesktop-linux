@@ -35,6 +35,10 @@ public abstract class NativeFactory
             {
                 subpkg = "mac";
             }
+            else if ( Platform.isLinux() )
+            {
+                subpkg = "x11";
+            }
         }
 
         String basepkg = NativeFactory.class.getName( );

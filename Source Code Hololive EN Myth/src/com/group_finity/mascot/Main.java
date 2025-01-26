@@ -1194,7 +1194,7 @@ public class Main
                         gridBag.gridy++;
                         panel.add(btnCallShimeji, gridBag);
                         gridBag.gridy++;
-                        panel.add( btnFollowCursor, gridBag );
+                        panel.add(btnFollowCursor, gridBag);
                         gridBag.gridy++;
                         panel.add(btnReduceToOne, gridBag);
                         gridBag.gridy++;
@@ -1218,9 +1218,7 @@ public class Main
                         panel.add(buttonPanel, gridBag);
                         gridBag.gridy++;
                         
-                        
-                        
-                        
+
                         // Add the panel to the JLayeredPane at a higher layer
                         panel.setBounds(0, 0, bgPanelWidth, bgPanelHeight);
                         layeredPane.add(panel, JLayeredPane.PALETTE_LAYER);
