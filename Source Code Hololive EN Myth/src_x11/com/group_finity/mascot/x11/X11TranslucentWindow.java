@@ -48,19 +48,18 @@ class X11TranslucentWindow extends JWindow implements TranslucentWindow {
 	public X11TranslucentWindow() {
 		super(com.sun.jna.platform.WindowUtils.getAlphaCompatibleGraphicsConfiguration());
 		this.init();
-		this.panel = new JPanel() { 
-			/**
-			 * 
-			 */
-			private static final long serialVersionUID = 1L;
+		// this.panel = new JPanel() { 
+		// 	/**
+		// 	 * 
+		// 	 */
+		// 	private static final long serialVersionUID = 1L;
 
-			@Override
-			protected void paintComponent(final Graphics g) {
-				g.drawImage(getImage().getManagedImage(), 0, 0, null);
-			}
-		};
-		this.setContentPane(this.panel);
-
+		// 	@Override
+		// 	protected void paintComponent(final Graphics g) {
+		// 		g.drawImage(getImage().getManagedImage(), 0, 0, null);
+		// 	}
+		// };
+		// this.setContentPane(this.panel);
 	}
 
 	private void init() {
@@ -82,16 +81,14 @@ class X11TranslucentWindow extends JWindow implements TranslucentWindow {
     private int[] pixels;
 
 	@SuppressWarnings("deprecation")
-	private void updateX11() {	 
+	private void updateX11() {
         try {
                 if (win == null) {
                 	win = new X11.Window((int)Native.getWindowID(alphaWindow));
                 } 
                 int w = image.getWidth(null);
                 int h = image.getHeight(null);
-                alphaWindow.setSize(w, h);
-                
-                
+
                 if (buffer == null || buffer.getSize() != w*h*4) {
                     buffer = new com.sun.jna.Memory(w*h*4);
                     pixels = new int[w*h];
@@ -122,7 +119,12 @@ class X11TranslucentWindow extends JWindow implements TranslucentWindow {
                                                         0, buffer, w, h, 32, w*4);
                     buffer.write(0, pixels, 0, pixels.length);
                    
-                    x11.XPutImage(dpy, win, gc, image, 0,0,0,0,w,h);
+					// if (Math.abs(getBounds().width - w) > 10 || Math.abs(getBounds().height - h) > 10)
+					if (getBounds().width != w || getBounds().height != h)
+					{
+						x11.XClearWindow(dpy, win);
+					}
+                    x11.XPutImage(dpy, win, gc, image, 0,0,0,getBounds().height-h,w,h);
                     x11.XFree(image.getPointer());
 
                 }
@@ -183,7 +185,7 @@ class X11TranslucentWindow extends JWindow implements TranslucentWindow {
 
 	
 	public void repaint(Graphics g){
-	       updateX11();
+		updateX11();
 	}
 	
 	public void updateImage() {
@@ -195,5 +197,4 @@ class X11TranslucentWindow extends JWindow implements TranslucentWindow {
 	public Component asComponent() {
 		return this;
 	}
-
 }

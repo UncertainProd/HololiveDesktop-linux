@@ -625,15 +625,32 @@ public class Mascot
         this.lookRight = lookRight;
     }
 
+    private int maxW = 0;
+    private int maxH = 0;
     public Rectangle getBounds( )
     {
+        // final int top = getAnchor( ).y - getImage( ).getCenter( ).y;
+        // final int left = getAnchor( ).x - getImage( ).getCenter( ).x;
+        // return new Rectangle(left, top, 500, 500);
         if( getImage( ) != null )
         {
             // Central area of the window find the image coordinates and ground coordinates. The centre has already been adjusted for scaling
             final int top = getAnchor( ).y - getImage( ).getCenter( ).y;
             final int left = getAnchor( ).x - getImage( ).getCenter( ).x;
 
-            final Rectangle result = new Rectangle( left, top, getImage( ).getSize( ).width, getImage( ).getSize( ).height );
+            final int imgWidth = getImage( ).getSize( ).width;
+            final int imgHeight = getImage( ).getSize( ).height;
+            if(imgWidth > maxW)
+            {
+                maxW = imgWidth;
+            }
+            if(imgHeight > maxH)
+            {
+                maxH = imgHeight;
+            }
+
+            // final Rectangle result = new Rectangle( left, top, getImage( ).getSize( ).width, getImage( ).getSize( ).height );
+            final Rectangle result = new Rectangle( left, top, maxW, maxH );
 
             return result;
         }
