@@ -1314,11 +1314,11 @@ public class Main
                 // return;
                 // Using a window which you can right click is kinda hack-y. gotta find a better way
                 log.log(Level.WARNING, "This system does not support system tray!");
-                Frame win = new Frame("Tray icon thing");
-                Label label = new Label("This is a test on linux!");
+                Frame win = new Frame("Tray icon substitute");
+                Label label = new Label("Right click this window to get the desktop-pet settings dialog");
                 label.setAlignment(Label.CENTER);
                 win.add(label);
-                win.setSize(300, 300);
+                win.setSize(420, 185);
                 win.setVisible(true);
                 win.setIconImage(gettrayImg());
                 win.addWindowListener(new java.awt.event.WindowAdapter() {
