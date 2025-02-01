@@ -2,6 +2,8 @@
 This is a port of [Hololive Desktop](https://github.com/NisenoShitsu/HololiveDesktop) by Niseno Shitsu (https://www.youtube.com/@nisenoshitsu) to linux. Parts of the code for this port are also taken from linux-shimeji (https://github.com/asdfman/linux-shimeji) but modified to fit this version.
 It has been tested on linux-mint under Cinnamon using x11, although it _should_ work under [xwayland](https://www.linuxfromscratch.org/blfs/view/git/x/xwayland.html), if you are running wayland.
 
+Make sure to use jdk-11 to run this program
+
 This port is pretty much done, but is still a WIP for the most part. Some features like those which involve interacting with desktop windows are not implemented yet, but most of the features should work as of now.
 
 Hololive Desktop pet is based on the [Shimeji-ee](https://kilkakon.com/shimeji) desktop pet program by Kilkakon.
