@@ -7,7 +7,7 @@ This port is pretty much done, but is still a WIP for the most part. Some featur
 Hololive Desktop pet is based on the [Shimeji-ee](https://kilkakon.com/shimeji) desktop pet program by Kilkakon.
 
 ## Getting the release version:
-You can get them from the releases tab here on github
+You can get them from the releases tab here on github. [Here](https://github.com/UncertainProd/HololiveDesktop-linux/releases/tag/v10.29.2024-linux)
 
 ## How to build from source:
 In order to build from source, you will need Java (JDK and JRE) as well as Apache Ant installed (You'll probably have to install `git` too, if you don't have it). Now to set up the environment, run `setup.sh`. Now, just open the terminal inside the "Source Code Hololive EN Myth" folder and type in the command `ant` to compile the source files. The final builds will be in a folder called `target`, inside of which there are zip files like "HololiveEN Myth Shimeji-ee_1.0.9_*.zip". Those contain the final build. Unzip any of those (except `src.zip`) into a folder and run the application by running the command `java -jar HololiveEN\ Myth\ Shimeji-ee.jar` in a terminal in that folder.
