@@ -20,12 +20,10 @@
 			<!-- compiling jna from source -->
 			<!-- <src path="/opt/jna_3_4_0_src/src" /> -->
 
-			<!-- <src path="/opt/jna_3_4_0_src/contrib/platform/src" /> -->
-			<!-- Uncomment the line below and comment the line above if you're not using Docker -->
+			<!-- Replace '../' with '/opt/' if you're using Docker -->
 			<src path="../jna_3_4_0_src/contrib/platform/src" />
 
-			<!-- <src path="/opt/netbeans_awtextras_src" /> -->
-			<!-- Uncomment the line below and comment the line above if you're not using Docker -->
+			<!-- Replace '../' with '/opt/' if you're using Docker -->
 			<src path="../netbeans_awtextras_src" />
 
 			<!-- compiling nimrod from source -->
