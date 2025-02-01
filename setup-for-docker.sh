@@ -15,10 +15,8 @@ echo "Patching WindowUtils.java from JNA ..."
 patch ./jna_3_4_0_src/contrib/platform/src/com/sun/jna/platform/WindowUtils.java jna_patch.patch
 
 echo "Patching build.xml ..."
-sed -i 's/<src path="..\/jna_3_4_0_src\/contrib\/platform\/src" \/>/<!-- <src path="..\/jna_3_4_0_src\/contrib\/platform\/src" \/> -->/' Source\ Code\ Hololive\ EN\ Myth/build.xml 
-sed -i 's/<!-- <src path="\/opt\/jna_3_4_0_src\/contrib\/platform\/src" \/> -->/<src path="\/opt\/jna_3_4_0_src\/contrib\/platform\/src" \/>/' Source\ Code\ Hololive\ EN\ Myth/build.xml 
 
-sed -i 's/<src path="..\/netbeans_awtextras_src" \/>/<!-- <src path="..\/netbeans_awtextras_src" \/> -->/' Source\ Code\ Hololive\ EN\ Myth/build.xml 
-sed -i 's/<!-- <src path="\/opt\/netbeans_awtextras_src" \/> -->/<src path="\/opt\/netbeans_awtextras_src" \/>/' Source\ Code\ Hololive\ EN\ Myth/build.xml 
+sed -i 's/..\/jna_3_4_0_src\/contrib\/platform\/src/\/opt\/jna_3_4_0_src\/contrib\/platform\/src/' Source\ Code\ Hololive\ EN\ Myth/build.xml
+sed -i 's/..\/netbeans_awtextras_src/\/opt\/netbeans_awtextras_src/' Source\ Code\ Hololive\ EN\ Myth/build.xml
 
 echo "Setup complete. You should be ready to build with Docker now"
