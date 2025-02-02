@@ -296,37 +296,35 @@ public class Main
             if( new File( filePath + "\u52D5\u4F5C.xml" ).exists( ) )
                 actionsFile = filePath + "\u52D5\u4F5C.xml";
             
+            final String[] actionsFileNames = {
+                "actions.xml",
+                "\u52D5\u4F5C.xml",
+                "\u00D5\u00EF\u00F2\u00F5\u00A2\u00A3.xml",
+                "\u00A6-\u00BA@.xml",
+                "\u00F4\u00AB\u00EC\u00FD.xml",
+                "one.xml",
+                "1.xml",
+            };
+
             filePath = "./conf/" + imageSet + "/";
-            if( new File( filePath + "actions.xml" ).exists( ) )
-                actionsFile = filePath + "actions.xml";
-            else if( new File( filePath + "\u52D5\u4F5C.xml" ).exists( ) )
-                actionsFile = filePath + "\u52D5\u4F5C.xml";
-            else if( new File( filePath + "\u00D5\u00EF\u00F2\u00F5\u00A2\u00A3.xml" ).exists( ) )
-                actionsFile = filePath + "\u00D5\u00EF\u00F2\u00F5\u00A2\u00A3.xml";
-            else if( new File( filePath + "\u00A6-\u00BA@.xml" ).exists( ) )
-                actionsFile = filePath + "\u00A6-\u00BA@.xml";
-            else if( new File( filePath + "\u00F4\u00AB\u00EC\u00FD.xml" ).exists( ) )
-                actionsFile = filePath + "\u00F4\u00AB\u00EC\u00FD.xml";
-            else if( new File( filePath + "one.xml" ).exists( ) )
-                actionsFile = filePath + "one.xml";
-            else if( new File( filePath + "1.xml" ).exists( ) )
-                actionsFile = filePath + "1.xml";
+            for (String filename : actionsFileNames)
+            {
+                if ( new File(filePath + filename).exists() )
+                {
+                    actionsFile = filePath + filename;
+                    break;
+                }
+            }
             
             filePath = "./img/" + imageSet + "/conf/";
-            if( new File( filePath + "actions.xml" ).exists( ) )
-                actionsFile = filePath + "actions.xml";
-            else if( new File( filePath + "\u52D5\u4F5C.xml" ).exists( ) )
-                actionsFile = filePath + "\u52D5\u4F5C.xml";
-            else if( new File( filePath + "\u00D5\u00EF\u00F2\u00F5\u00A2\u00A3.xml" ).exists( ) )
-                actionsFile = filePath + "\u00D5\u00EF\u00F2\u00F5\u00A2\u00A3.xml";
-            else if( new File( filePath + "\u00A6-\u00BA@.xml" ).exists( ) )
-                actionsFile = filePath + "\u00A6-\u00BA@.xml";
-            else if( new File( filePath + "\u00F4\u00AB\u00EC\u00FD.xml" ).exists( ) )
-                actionsFile = filePath + "\u00F4\u00AB\u00EC\u00FD.xml";
-            else if( new File( filePath + "one.xml" ).exists( ) )
-                actionsFile = filePath + "one.xml";
-            else if( new File( filePath + "1.xml" ).exists( ) )
-                actionsFile = filePath + "1.xml";
+            for (String filename : actionsFileNames)
+            {
+                if ( new File(filePath + filename).exists() )
+                {
+                    actionsFile = filePath + filename;
+                    break;
+                }
+            }
 
             log.log( Level.INFO, imageSet + " Read Action File ({0})", actionsFile );
 
@@ -342,41 +340,36 @@ public class Main
             if( new File( filePath + "\u884C\u52D5.xml" ).exists( ) )
                 behaviorsFile = filePath + "\u884C\u52D5.xml";
             
+            final String[] behaviorsFileNames = {
+                "behaviors.xml",
+                "behavior.xml",
+                "\u884C\u52D5.xml",
+                "\u00DE\u00ED\u00EE\u00D5\u00EF\u00F2.xml",
+                "\u00AA\u00B5\u00A6-.xml",
+                "\u00ECs\u00F4\u00AB.xml",
+                "two.xml",
+                "2.xml",
+            };
+
             filePath = "./conf/" + imageSet + "/";
-            if( new File( filePath + "behaviors.xml" ).exists( ) )
-                behaviorsFile = filePath + "behaviors.xml";
-            else if( new File( filePath + "behavior.xml" ).exists( ) )
-                behaviorsFile = filePath + "behavior.xml";
-            else if( new File( filePath + "\u884C\u52D5.xml" ).exists( ) )
-                behaviorsFile = filePath + "\u884C\u52D5.xml";
-            else if( new File( filePath + "\u00DE\u00ED\u00EE\u00D5\u00EF\u00F2.xml" ).exists( ) )
-                behaviorsFile = filePath + "\u00DE\u00ED\u00EE\u00D5\u00EF\u00F2.xml";
-            else if( new File( filePath + "\u00AA\u00B5\u00A6-.xml" ).exists( ) )
-                behaviorsFile = filePath + "\u00AA\u00B5\u00A6-.xml";
-            else if( new File( filePath + "\u00ECs\u00F4\u00AB.xml" ).exists( ) )
-                behaviorsFile = filePath + "\u00ECs\u00F4\u00AB.xml";
-            else if( new File( filePath + "two.xml" ).exists( ) )
-                behaviorsFile = filePath + "two.xml";
-            else if( new File( filePath + "2.xml" ).exists( ) )
-                behaviorsFile = filePath + "2.xml";
+            for (String filename : behaviorsFileNames)
+            {
+                if ( new File(filePath + filename).exists() )
+                {
+                    behaviorsFile = filePath + filename;
+                    break;
+                }
+            }
             
             filePath = "./img/" + imageSet + "/conf/";
-            if( new File( filePath + "behaviors.xml" ).exists( ) )
-                behaviorsFile = filePath + "behaviors.xml";
-            else if( new File( filePath + "behavior.xml" ).exists( ) )
-                behaviorsFile = filePath + "behavior.xml";
-            else if( new File( filePath + "\u884C\u52D5.xml" ).exists( ) )
-                behaviorsFile = filePath + "\u884C\u52D5.xml";
-            else if( new File( filePath + "\u00DE\u00ED\u00EE\u00D5\u00EF\u00F2.xml" ).exists( ) )
-                behaviorsFile = filePath + "\u00DE\u00ED\u00EE\u00D5\u00EF\u00F2.xml";
-            else if( new File( filePath + "\u00AA\u00B5\u00A6-.xml" ).exists( ) )
-                behaviorsFile = filePath + "\u00AA\u00B5\u00A6-.xml";
-            else if( new File( filePath + "\u00ECs\u00F4\u00AB.xml" ).exists( ) )
-                behaviorsFile = filePath + "\u00ECs\u00F4\u00AB.xml";
-            else if( new File( filePath + "two.xml" ).exists( ) )
-                behaviorsFile = filePath + "two.xml";
-            else if( new File( filePath + "2.xml" ).exists( ) )
-                behaviorsFile = filePath + "2.xml";
+            for (String filename : behaviorsFileNames)
+            {
+                if ( new File(filePath + filename).exists() )
+                {
+                    behaviorsFile = filePath + filename;
+                    break;
+                }
+            }
 
             log.log( Level.INFO, imageSet + " Read Behavior File ({0})", behaviorsFile );
 
