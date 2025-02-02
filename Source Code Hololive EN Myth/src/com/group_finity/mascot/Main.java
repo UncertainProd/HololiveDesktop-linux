@@ -825,288 +825,57 @@ public class Main
                         {
                             public void actionPerformed( final ActionEvent e )
                             {
-                                // English menu item
-                                final JMenuItem englishMenu = new JMenuItem( "English" );
-                                englishMenu.addActionListener( new ActionListener( )
-                                {
-                                    public void actionPerformed( final ActionEvent e )
-                                    {
-                                        form.dispose( );
-                                        updateLanguage( "en-GB" );
-                                        updateConfigFile( );
-                                    }
-                                } );
-
-                                // Arabic menu item
-                                final JMenuItem arabicMenu = new JMenuItem( "\u0639\u0631\u0628\u064A" );
-                                arabicMenu.addActionListener( new ActionListener( )
-                                {
-                                    public void actionPerformed( final ActionEvent e )
-                                    {
-                                        form.dispose( );
-                                        updateLanguage( "ar-SA" );
-                                        updateConfigFile( );
-                                    }
-                                } );
-
-                                // Catalan menu item
-                                final JMenuItem catalanMenu = new JMenuItem( "Catal\u00E0" );
-                                catalanMenu.addActionListener( new ActionListener( )
-                                {
-                                    public void actionPerformed( final ActionEvent e )
-                                    {
-                                        form.dispose( );
-                                        updateLanguage( "ca-ES" );
-                                        updateConfigFile( );
-                                    }
-                                } );
-
-                                // German menu item
-                                final JMenuItem germanMenu = new JMenuItem( "Deutsch" );
-                                germanMenu.addActionListener( new ActionListener( )
-                                {
-                                    public void actionPerformed( final ActionEvent e )
-                                    {
-                                        form.dispose( );
-                                        updateLanguage( "de-DE" );
-                                        updateConfigFile( );
-                                    }
-                                } );
-
-                                // Spanish menu item
-                                final JMenuItem spanishMenu = new JMenuItem( "Espa\u00F1ol" );
-                                spanishMenu.addActionListener( new ActionListener( )
-                                {
-                                    public void actionPerformed( final ActionEvent e )
-                                    {
-                                        form.dispose( );
-                                        updateLanguage( "es-ES" );
-                                        updateConfigFile( );
-                                    }
-                                } );
-
-                                // French menu item
-                                final JMenuItem frenchMenu = new JMenuItem( "Fran\u00E7ais" );
-                                frenchMenu.addActionListener( new ActionListener( )
-                                {
-                                    public void actionPerformed( final ActionEvent e )
-                                    {
-                                        form.dispose( );
-                                        updateLanguage( "fr-FR" );
-                                        updateConfigFile( );
-                                    }
-                                } );
-
-                                // Croatian menu item
-                                final JMenuItem croatianMenu = new JMenuItem( "Hrvatski" );
-                                croatianMenu.addActionListener( new ActionListener( )
-                                {
-                                    public void actionPerformed( final ActionEvent e )
-                                    {
-                                        form.dispose( );
-                                        updateLanguage( "hr-HR" );
-                                        updateConfigFile( );
-                                    }
-                                } );
-
-                                // Italian menu item
-                                final JMenuItem italianMenu = new JMenuItem( "Italiano" );
-                                italianMenu.addActionListener( new ActionListener( )
-                                {
-                                    public void actionPerformed( final ActionEvent e )
-                                    {
-                                        form.dispose( );
-                                        updateLanguage( "it-IT" );
-                                        updateConfigFile( );
-                                    }
-                                } );
-
-                                // Dutch menu item
-                                final JMenuItem dutchMenu = new JMenuItem( "Nederlands" );
-                                dutchMenu.addActionListener( new ActionListener( )
-                                {
-                                    public void actionPerformed( final ActionEvent e )
-                                    {
-                                        form.dispose( );
-                                        updateLanguage( "nl-NL" );
-                                        updateConfigFile( );
-                                    }
-                                } );
-
-                                // Polish menu item
-                                final JMenuItem polishMenu = new JMenuItem( "Polski" );
-                                polishMenu.addActionListener( new ActionListener( )
-                                {
-                                    public void actionPerformed( final ActionEvent e )
-                                    {
-                                        form.dispose( );
-                                        updateLanguage( "pl-PL" );
-                                        updateConfigFile( );
-                                    }
-                                } );
-
-                                // Brazilian Portuguese menu item
-                                final JMenuItem brazilianPortugueseMenu = new JMenuItem( "Portugu\u00eas Brasileiro" );
-                                brazilianPortugueseMenu.addActionListener( new ActionListener( )
-                                {
-                                    public void actionPerformed( final ActionEvent e )
-                                    {
-                                        form.dispose( );
-                                        updateLanguage( "pt-BR" );
-                                        updateConfigFile( );
-                                    }
-                                } );
-
-                                // Portuguese menu item
-                                final JMenuItem portugueseMenu = new JMenuItem( "Portugu\u00eas" );
-                                portugueseMenu.addActionListener( new ActionListener( )
-                                {
-                                    public void actionPerformed( final ActionEvent e )
-                                    {
-                                        form.dispose( );
-                                        updateLanguage( "pt-PT" );
-                                        updateConfigFile( );
-                                    }
-                                } );
-
-                                // Russian menu item
-                                final JMenuItem russianMenu = new JMenuItem( "\u0440\u0443\u0301\u0441\u0441\u043a\u0438\u0439 \u044f\u0437\u044b\u0301\u043a" );
-                                russianMenu.addActionListener( new ActionListener( )
-                                {
-                                    public void actionPerformed( final ActionEvent e )
-                                    {
-                                        form.dispose( );
-                                        updateLanguage( "ru-RU" );
-                                        updateConfigFile( );
-                                    }
-                                } );
-
-                                // Romanian menu item
-                                final JMenuItem romanianMenu = new JMenuItem( "Rom\u00e2n\u0103" );
-                                romanianMenu.addActionListener( new ActionListener( )
-                                {
-                                    public void actionPerformed( final ActionEvent e )
-                                    {
-                                        form.dispose( );
-                                        updateLanguage( "ro-RO" );
-                                        updateConfigFile( );
-                                    }
-                                } );
-
-                                // Srpski menu item
-                                final JMenuItem serbianMenu = new JMenuItem( "Srpski" );
-                                serbianMenu.addActionListener( new ActionListener( )
-                                {
-                                    public void actionPerformed( final ActionEvent e )
-                                    {
-                                        form.dispose( );
-                                        updateLanguage( "sr-RS" );
-                                        updateConfigFile( );
-                                    }
-                                } );
-
-                                // Finnish menu item
-                                final JMenuItem finnishMenu = new JMenuItem( "Suomi" );
-                                finnishMenu.addActionListener( new ActionListener( )
-                                {
-                                    public void actionPerformed( final ActionEvent e )
-                                    {
-                                        form.dispose( );
-                                        updateLanguage( "fi-FI" );
-                                        updateConfigFile( );
-                                    }
-                                } );
-
-                                // Vietnamese menu item
-                                final JMenuItem vietnameseMenu = new JMenuItem( "ti\u1ebfng Vi\u1ec7t" );
-                                vietnameseMenu.addActionListener( new ActionListener( )
-                                {
-                                    public void actionPerformed( final ActionEvent e )
-                                    {
-                                        form.dispose( );
-                                        updateLanguage( "vi-VN" );
-                                        updateConfigFile( );
-                                    }
-                                } );
-
-                                // Chinese menu item
-                                final JMenuItem chineseMenu = new JMenuItem( "\u7b80\u4f53\u4e2d\u6587" );
-                                chineseMenu.addActionListener( new ActionListener( )
-                                {
-                                    public void actionPerformed( final ActionEvent e )
-                                    {
-                                        form.dispose( );
-                                        updateLanguage( "zh-CN" );
-                                        updateConfigFile( );
-                                    }
-                                } );
-
-                                // Chinese (Traditional) menu item
-                                final JMenuItem chineseTraditionalMenu = new JMenuItem( "\u7E41\u9AD4\u4E2D\u6587" );
-                                chineseTraditionalMenu.addActionListener( new ActionListener( )
-                                {
-                                    public void actionPerformed( final ActionEvent e )
-                                    {
-                                        form.dispose( );
-                                        updateLanguage( "zh-TW" );
-                                        updateConfigFile( );
-                                    }
-                                } );
-
-                                // Korean menu item
-                                final JMenuItem koreanMenu = new JMenuItem( "\ud55c\uad6d\uc5b4" );
-                                koreanMenu.addActionListener( new ActionListener( )
-                                {
-                                    public void actionPerformed( final ActionEvent e )
-                                    {
-                                        form.dispose( );
-                                        updateLanguage( "ko-KR" );
-                                        updateConfigFile( );
-                                    }
-                                } );
-
-                                // Japanese menu item
-                                final JMenuItem japaneseMenu = new JMenuItem( "\u65E5\u672C\u8A9E" );
-                                japaneseMenu.addActionListener( new ActionListener( )
-                                {
-                                    public void actionPerformed( final ActionEvent e )
-                                    {
-                                        form.dispose( );
-                                        updateLanguage( "ja-JP" );
-                                        updateConfigFile( );
-                                    }
-                                } );
-                                
-                                final JMenuItem[] languageMenuItems = {
-                                    englishMenu,
-                                    arabicMenu,
-                                    catalanMenu,
-                                    germanMenu,
-                                    spanishMenu,
-                                    frenchMenu,
-                                    croatianMenu,
-                                    italianMenu,
-                                    dutchMenu,
-                                    polishMenu,
-                                    portugueseMenu,
-                                    brazilianPortugueseMenu,
-                                    russianMenu,
-                                    romanianMenu,
-                                    serbianMenu,
-                                    finnishMenu,
-                                    vietnameseMenu,
-                                    chineseMenu,
-                                    chineseTraditionalMenu,
-                                    koreanMenu,
-                                    japaneseMenu,
+                                final String[][] languagePairs = {
+                                    {"English", "en-GB"},
+                                    {"\u0639\u0631\u0628\u064A", "ar-SA"},
+                                    {"Catal\u00E0", "ca-ES"},
+                                    {"Deutsch", "de-DE"},
+                                    {"Espa\u00F1ol", "es-ES"},
+                                    {"Fran\u00E7ais", "fr-FR"},
+                                    {"Hrvatski", "hr-HR"},
+                                    {"Italiano", "it-IT"},
+                                    {"Nederlands", "nl-NL"},
+                                    {"Polski", "pl-PL"},
+                                    {"Portugu\u00eas Brasileiro", "pt-BR"},
+                                    {"Portugu\u00eas", "pt-PT"},
+                                    {"\u0440\u0443\u0301\u0441\u0441\u043a\u0438\u0439 \u044f\u0437\u044b\u0301\u043a", "ru-RU"},
+                                    {"Rom\u00e2n\u0103", "ro-RO"},
+                                    {"Srpski", "sr-RS"},
+                                    {"Suomi", "fi-FI"},
+                                    {"ti\u1ebfng Vi\u1ec7t", "vi-VN"},
+                                    {"\u7b80\u4f53\u4e2d\u6587", "zh-CN"},
+                                    {"\u7E41\u9AD4\u4E2D\u6587", "zh-TW"},
+                                    {"\ud55c\uad6d\uc5b4", "ko-KR"},
+                                    {"\u65E5\u672C\u8A9E", "ja-JP"},
                                 };
+                                final JMenuItem[] languageMenuItems = new JMenuItem[languagePairs.length];
+                                for (int i = 0; i < languagePairs.length; i++)
+                                {
+                                    final String[] langPair = languagePairs[i];
+                                    final String languageName = langPair[0];
+                                    final String langCode = langPair[1];
+                                    final JMenuItem langMenuItem = new JMenuItem( languageName );
+                                    langMenuItem.addActionListener(new ActionListener() {
+                                        public void actionPerformed( final ActionEvent e )
+                                        {
+                                            form.dispose( );
+                                            updateLanguage( langCode );
+                                            updateConfigFile( );
+                                        }
+                                    });
+
+                                    languageMenuItems[i] = langMenuItem;
+                                }
+
                                 JPopupMenu languagePopup = new JPopupMenu( );
+                                boolean shouldAddSeparator = true;
                                 for (JMenuItem lang : languageMenuItems)
                                 {
                                     languagePopup.add(lang);
-                                    if(lang == englishMenu)
+                                    if(shouldAddSeparator)
                                     {
                                         languagePopup.addSeparator( );
+                                        shouldAddSeparator = false; // to make sure we only do this once at the beginning
                                     }
                                 }
                                 languagePopup.addPopupMenuListener( new PopupMenuListener( )
