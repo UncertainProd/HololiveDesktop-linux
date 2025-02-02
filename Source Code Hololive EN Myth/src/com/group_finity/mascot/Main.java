@@ -477,6 +477,16 @@ public class Main
         return trayImg;
     }
 
+    private void initPopupForm()
+    {
+
+    }
+
+    private void onPopupTriggered()
+    {
+        
+    }
+
     /**
      * Create a tray icon.
      *
@@ -1188,30 +1198,28 @@ public class Main
                         gridBag.fill = GridBagConstraints.HORIZONTAL;
                         gridBag.gridx = 0;
                         gridBag.gridy = 0;
+
+                        JButton buttons[] = {
+                            btnCallShimeji,
+                            btnFollowCursor,
+                            btnReduceToOne,
+                            btnRestoreWindows,
+                            btnAllowedBehaviours,
+                            btnChooseShimeji,
+                            btnSettings,
+                            btnLanguage,
+                            btnPauseAll,
+                            btnDismissAll,
+                        };
                     
                         // Add buttons to the panel
                         gridBag.insets = new Insets((int) (5 * scaling), 0, 5, 0);
                         gridBag.gridy++;
-                        panel.add(btnCallShimeji, gridBag);
-                        gridBag.gridy++;
-                        panel.add(btnFollowCursor, gridBag);
-                        gridBag.gridy++;
-                        panel.add(btnReduceToOne, gridBag);
-                        gridBag.gridy++;
-                        panel.add(btnRestoreWindows, gridBag);
-                        gridBag.gridy++;
-                        panel.add(btnAllowedBehaviours, gridBag);
-                        gridBag.gridy++;
-                        panel.add(btnChooseShimeji, gridBag);
-                        gridBag.gridy++;
-                        panel.add(btnSettings, gridBag);
-                        gridBag.gridy++;
-                        panel.add(btnLanguage, gridBag);
-                        gridBag.gridy++;
-                        panel.add(btnPauseAll, gridBag);
-                        gridBag.gridy++;
-                        panel.add(btnDismissAll, gridBag);
-                        gridBag.gridy++;
+                        for (JButton btn : buttons)
+                        {
+                            panel.add(btn, gridBag);
+                            gridBag.gridy++;
+                        }
                         panel.add(new JSeparator(), gridBag);
                         panel.add(buttonPanel, gridBag);
                         gridBag.gridy++;
@@ -1237,16 +1245,11 @@ public class Main
                         
                         // Set the form dimensions
                         java.awt.FontMetrics metrics = btnCallShimeji.getFontMetrics(btnCallShimeji.getFont());
-                        int width = metrics.stringWidth(btnCallShimeji.getText());
-                        width = Math.max( metrics.stringWidth( btnFollowCursor.getText( ) ), width );
-                        width = Math.max(metrics.stringWidth(btnReduceToOne.getText()), width);
-                        width = Math.max(metrics.stringWidth(btnRestoreWindows.getText()), width);
-                        width = Math.max(metrics.stringWidth(btnAllowedBehaviours.getText()), width);
-                        width = Math.max(metrics.stringWidth(btnChooseShimeji.getText()), width);
-                        width = Math.max(metrics.stringWidth(btnSettings.getText()), width);
-                        width = Math.max(metrics.stringWidth(btnLanguage.getText()), width);
-                        width = Math.max(metrics.stringWidth(btnPauseAll.getText()), width);
-                        width = Math.max(metrics.stringWidth(btnDismissAll.getText()), width);
+                        int width = -1;
+                        
+                        for (JButton btn : buttons) {
+                            width = Math.max(metrics.stringWidth(btn.getText()), width);
+                        }
                         panel.setPreferredSize(new Dimension(width + 64,
                                 (int) (24 * scaling) + // 12 padding on top and bottom
                                 (int) (75 * scaling) + // 13 insets of 5 height normally
