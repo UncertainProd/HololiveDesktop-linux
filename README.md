@@ -1,5 +1,6 @@
 # A port of HololiveDesktop for linux
-This is a port of [Hololive Desktop](https://github.com/NisenoShitsu/HololiveDesktop) by Niseno Shitsu (https://www.youtube.com/@nisenoshitsu) to linux. Parts of the code for this port are also taken from linux-shimeji (https://github.com/asdfman/linux-shimeji) but modified to fit this version.
+### Upstream url (cuz github isn't showing it): https://github.com/NisenoShitsu/HololiveDesktop (the original is windows-only)
+This is a port of [Hololive Desktop](https://github.com/NisenoShitsu/HololiveDesktop) by Niseno Shitsu (youtube: https://www.youtube.com/@nisenoshitsu) (github: https://github.com/NisenoShitsu) to linux. Parts of the code for this port are also taken from linux-shimeji (https://github.com/asdfman/linux-shimeji) but modified to fit this version.
 It has been tested on linux-mint under Cinnamon using x11, although it _should_ work under [xwayland](https://www.linuxfromscratch.org/blfs/view/git/x/xwayland.html), if you are running wayland.
 
 Make sure to use jdk-11 to run this program
