@@ -1084,29 +1084,38 @@ public class Main
                                     }
                                 } );
                                 
+                                final JMenuItem[] languageMenuItems = {
+                                    englishMenu,
+                                    arabicMenu,
+                                    catalanMenu,
+                                    germanMenu,
+                                    spanishMenu,
+                                    frenchMenu,
+                                    croatianMenu,
+                                    italianMenu,
+                                    dutchMenu,
+                                    polishMenu,
+                                    portugueseMenu,
+                                    brazilianPortugueseMenu,
+                                    russianMenu,
+                                    romanianMenu,
+                                    serbianMenu,
+                                    finnishMenu,
+                                    vietnameseMenu,
+                                    chineseMenu,
+                                    chineseTraditionalMenu,
+                                    koreanMenu,
+                                    japaneseMenu,
+                                };
                                 JPopupMenu languagePopup = new JPopupMenu( );
-                                languagePopup.add( englishMenu );
-                                languagePopup.addSeparator( );
-                                languagePopup.add( arabicMenu );
-                                languagePopup.add( catalanMenu );
-                                languagePopup.add( germanMenu );
-                                languagePopup.add( spanishMenu );
-                                languagePopup.add( frenchMenu );
-                                languagePopup.add( croatianMenu );
-                                languagePopup.add( italianMenu );
-                                languagePopup.add( dutchMenu );
-                                languagePopup.add( polishMenu );
-                                languagePopup.add( portugueseMenu );
-                                languagePopup.add( brazilianPortugueseMenu );
-                                languagePopup.add( russianMenu );
-                                languagePopup.add( romanianMenu );
-                                languagePopup.add( serbianMenu );
-                                languagePopup.add( finnishMenu );
-                                languagePopup.add( vietnameseMenu );
-                                languagePopup.add( chineseMenu );
-                                languagePopup.add( chineseTraditionalMenu );
-                                languagePopup.add( koreanMenu );
-                                languagePopup.add( japaneseMenu );
+                                for (JMenuItem lang : languageMenuItems)
+                                {
+                                    languagePopup.add(lang);
+                                    if(lang == englishMenu)
+                                    {
+                                        languagePopup.addSeparator( );
+                                    }
+                                }
                                 languagePopup.addPopupMenuListener( new PopupMenuListener( )
                                 {
                                     @Override
@@ -1181,7 +1190,6 @@ public class Main
                         
                         // Create a JLayeredPane
                         JLayeredPane layeredPane = new JLayeredPane();
-                        // layeredPane.setPreferredSize(new Dimension(200, 400));
                         layeredPane.setPreferredSize(new Dimension(bgPanelWidth, bgPanelHeight));
                         
                         // Add the background panel to the lowest layer
@@ -1199,7 +1207,7 @@ public class Main
                         gridBag.gridx = 0;
                         gridBag.gridy = 0;
 
-                        JButton buttons[] = {
+                        final JButton buttons[] = {
                             btnCallShimeji,
                             btnFollowCursor,
                             btnReduceToOne,
